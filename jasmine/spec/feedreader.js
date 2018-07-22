@@ -26,7 +26,12 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-
+        it('each feed in array defined/has URL',function(){
+            allFeeds.forEach(function(feed) {
+                expect(feed.url).toBeDefined();
+                expect(feed.url.length).toBeGreaterThan(0);
+            });
+        })
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
@@ -39,7 +44,7 @@ $(function() {
          */
     });
 
-
+    describe('The menu',function(){})
     /* TODO: Write a new test suite named "The menu" */
 
         /* TODO: Write a test that ensures the menu element is
@@ -53,7 +58,7 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-
+    describe('Initial Entries',function(){})
     /* TODO: Write a new test suite named "Initial Entries" */
 
         /* TODO: Write a test that ensures when the loadFeed
@@ -62,7 +67,7 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-
+    describe('New Feed Selection',function(){})     
     /* TODO: Write a new test suite named "New Feed Selection" */
 
         /* TODO: Write a test that ensures when a new feed is loaded
